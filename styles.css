@@ -1,0 +1,217 @@
+/* General Styles */
+body {
+  margin: 50px;
+  padding: 0;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f9f9f9;
+}
+
+.login-container {
+  display: flex;
+  flex-wrap: wrap; /* Memastikan elemen tidak keluar kontainer */
+  width: 90%;
+  max-width: 1200px;
+  height: auto; /* Tinggi otomatis agar responsif */
+  background-color: #fff;
+  border-radius: 15px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+/* Left Section */
+.left-section {
+  flex: 1;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url(assets/img/PMI.jpg);
+  background-size: cover;
+  background-position: center;
+  min-height: 250px; /* Minimal tinggi untuk responsif */
+}
+
+.welcome-text h1 {
+  font-size: 2.5rem;
+  text-align: center;
+  font-weight: 700;
+}
+
+/* Right Section */
+.right-section {
+  flex: 1.2;
+  padding: 30px 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow-y: auto;
+}
+
+.logos {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.logo-school,
+.logo-pmi {
+  height: 90px;
+  max-width: 90px;
+  object-fit: contain;
+}
+
+/* Form Container */
+.login-form-container {
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.login-description {
+  color: #666;
+  font-size: 0.9rem;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  font-size: 0.9rem;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-sizing: border-box;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus {
+  border-color: #cb1111;
+  outline: none;
+}
+
+.password-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.toggle-password {
+  position: absolute;
+  right: 10px;
+  cursor: pointer;
+  color: #666;
+  font-size: 1rem;
+}
+
+.toggle-password:hover {
+  color: #cb1111;
+}
+
+.btn-login {
+  width: 100%;
+  padding: 10px;
+  background: #cb1111;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-top: 10px;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+.btn-login:hover {
+  background: #fa0505;
+}
+
+.register-text {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 0.9rem;
+}
+
+.register-link {
+  color: #cb1111;
+  text-decoration: none;
+}
+
+.register-link:hover {
+  text-decoration: underline;
+}
+
+.checkbox-group {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.checkbox-group input[type="checkbox"] {
+  margin-right: 5px;
+  accent-color: #cb1111; /* Warna checkbox */
+}
+
+.checkbox-group label {
+  font-size: 0.9rem;
+  color: #333;
+}
+
+.forgot-password {
+  font-size: 0.9rem;
+  color: #cb1111;
+  text-decoration: none;
+  margin-left: auto; /* Dorong ke kanan */
+}
+
+.forgot-password:hover {
+  text-decoration: underline;
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+  .login-container {
+    flex-direction: column; /* Mengatur tata letak vertikal */
+    height: auto; /* Mengizinkan konten untuk berkembang */
+  }
+
+  .left-section {
+    min-height: 200px;
+  }
+
+  .logos img {
+    max-height: 70px;
+  }
+
+  .right-section {
+    padding: 20px;
+  }
+
+  .btn-login {
+    font-size: 0.9rem;
+    padding: 8px;
+  }
+}
